@@ -73,7 +73,8 @@ function Navbar() {
         {authUser !==null && <Button colorScheme="purple" onClick={()=>logOut()}>Logout</Button>}
         {/* {authUser ===null &&  <Register/>}
         {authUser ===null &&  <Login/>} */}
-        <Menu>
+        
+        {!authUser && <Menu>
         <MenuButton
           as={IconButton}
           aria-label='Options'
@@ -89,7 +90,7 @@ function Navbar() {
           </MenuItem>
 
         </MenuList>
-      </Menu>
+      </Menu>}
 
         </HStack>
     </Flex>
