@@ -15,8 +15,7 @@ import { useState } from 'react';
 //Pages
 import RootLayout from './Layout/RootLayout'
 import DashBoard from './Pages/DashBoard';
-import Create from './Pages/Create'
-import Profile from './Pages/Profile'
+
 import HomePage from './Pages/HomePage';
 import { auth } from './firebase-config';
 import { onAuthStateChanged } from 'firebase/auth';
@@ -24,7 +23,7 @@ import AccountExist from './Entity/AccountExist';
 import Events from './Pages/Events';
 import Rewards from './Pages/Rewards';
 
-import Quest from './Pages/Quest';
+import Community from './Pages/Community';
 
 export const Context = createContext();
 
@@ -43,7 +42,7 @@ function App() {
         <Route index element={<HomePage/>}/>
         <Route path="dashboard" element={<DashBoard/>}/>
         <Route path="events" element={<Events/>}/>
-        <Route path="quest" element={<Quest/>}/>
+        <Route path="community" element={<Community/>}/>
         <Route path="rewards" element={<Rewards/>}/>
       </Route>
     )

@@ -3,7 +3,7 @@ import { myModel } from "../firebase-config";
 import QuestCard from "../Components/QuestCard";
 import { Box, HStack } from "@chakra-ui/react";
 
-function Quest() {
+function Community() {
 
   const [quests,setQuests] = useState([]);
   const [loading,setLoading] = useState(true);
@@ -65,4 +65,4 @@ function Quest() {
   )
 }
 
-export default Quest;
+export default Community;

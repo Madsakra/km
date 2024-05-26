@@ -2,8 +2,11 @@ import { Box, Button, Flex, Image, SimpleGrid, Text } from "@chakra-ui/react"
 import homeBG from '../Images/homeBG.png'
 import Register from "../Components/Register"
 import Login from "../Components/Login"
+import { Context } from "../App"
+import { useContext } from "react"
 
 function HomePage() {
+  const {authUser} = useContext(Context);
   return (
     <div>
   
@@ -19,11 +22,12 @@ function HomePage() {
 
                 <Text fontSize='4xl'>Pushing for a better world everyday. We believe our act of kindness is a wave in the ocean.</Text>
                 
-                <Box m="20px 200px 30px 0px">
+                {!authUser && <Box m="20px 200px 30px 0px">
                     
                     <Register/>
                     <Login/>
                 </Box>
+                }
                 
                 </Flex>
 

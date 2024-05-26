@@ -61,7 +61,7 @@ function Navbar() {
         <Text fontSize='3xl' as={Link} to='/dashboard'>DashBoard</Text>
         <Text fontSize='3xl' as={Link} to='/events'>Events</Text>
         <Text fontSize='3xl' as={Link} to='/rewards'>Rewards</Text>
-        <Text fontSize='3xl' as={Link} to='/quest'>Quest</Text>
+        <Text fontSize='3xl' as={Link} to='/community'>Community</Text>
         </HStack>
         }
         <Spacer/>
