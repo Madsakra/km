@@ -6,7 +6,7 @@ import { db } from "../firebase-config";
 
 
 async function AccountExist(uid){
-
+  
     let accountExist = false;
 
     const querySnapshot = await getDocs(collection(db, "User_Account"));

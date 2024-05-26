@@ -24,6 +24,8 @@ import AccountExist from './Entity/AccountExist';
 import Events from './Pages/Events';
 import Rewards from './Pages/Rewards';
 
+import Quest from './Pages/Quest';
+
 export const Context = createContext();
 
 function App() {
@@ -31,7 +33,7 @@ function App() {
 
   const [authUser,setAuthUser] = useState(null);
   const [accountExist,setAccountExist] = useState(false)
-
+  const [account,setAccount] = useState(null);
   
 
 
@@ -41,7 +43,7 @@ function App() {
         <Route index element={<HomePage/>}/>
         <Route path="dashboard" element={<DashBoard/>}/>
         <Route path="events" element={<Events/>}/>
-        <Route path="create" element={<Create/>}/>
+        <Route path="quest" element={<Quest/>}/>
         <Route path="rewards" element={<Rewards/>}/>
       </Route>
     )
@@ -65,7 +67,7 @@ function App() {
   useEffect(()=>{
 
     checkCall();
-
+    console.log(account);
   })
 
   useEffect(()=>{
@@ -73,7 +75,7 @@ function App() {
       if (user)
         {
           setAuthUser(user);
-          console.log(accountExist);
+     
         }
         else{
           console.log("no user exist")
@@ -90,7 +92,7 @@ function App() {
   return (
     <>
 
-    <Context.Provider value={{authUser,accountExist,setAccountExist,setAuthUser}}>
+    <Context.Provider value={{authUser,accountExist,setAccountExist,setAuthUser,setAccount}}>
 
     <RouterProvider router={router}/>    
     

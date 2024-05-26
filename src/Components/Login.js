@@ -62,7 +62,7 @@ export default function Login() {
 
     return (
     <>
-        <Button leftIcon={<UnlockIcon />} bg="orange.200" width={{base:'100%'}} mb="20px" me="20px" onClick={onOpen}>
+        <Button leftIcon={<UnlockIcon />} bg="orange.200" width="30vw"  mb="20px" me="20px" onClick={onOpen}>
             <Text fontWeight="bold">Login</Text>
         </Button>
       <Container>

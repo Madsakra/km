@@ -69,7 +69,7 @@ function Register() {
 
     return (
     <>
-        <Button leftIcon={<AddIcon />} bg="orange.400" width={{base:'100%'}} mb="20px" me="20px" onClick={onOpen}>
+        <Button leftIcon={<AddIcon />} bg="orange.400" width="30vw" mb="20px" me="20px" onClick={onOpen}>
             <Text fontWeight="bold">Register</Text>
         </Button>
 
